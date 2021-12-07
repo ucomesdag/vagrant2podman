@@ -22,10 +22,11 @@ Vagrant.configure("2") do |config|
   config.vm.provider :vmware_desktop do |v|
     v.vmx["memsize"] = 1024
     v.vmx["displayName"] = "podman"
+    # v.ssh_info_public = true
   end
 
   config.vm.provider :hyperv do |h|
-    # Hyper-V provider not supported ATM
+    # Hyper-V provider not supported ATM... exiting
   end
 
   config.vm.provider :docker do |d|
